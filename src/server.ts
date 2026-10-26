@@ -45,7 +45,7 @@ app.get("/users/:id", async (req, res) => {
     if (!/^[a-fA-F0-9]{24}$/.test(id)) {
       res.status(400).json({
         success: false,
-        message: "Invalid user ID",
+        message: "Invalid user ID ! Please input valid ID",
       });
       return;
     }
@@ -57,7 +57,7 @@ app.get("/users/:id", async (req, res) => {
     if (!user) {
       res.status(404).json({
         success: false,
-        message: "User not found",
+        message: "User not founded",
       });
       return;
     }
